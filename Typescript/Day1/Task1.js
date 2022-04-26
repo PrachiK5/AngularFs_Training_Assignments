@@ -1,0 +1,11 @@
+var EmployeeId = 5464654;
+var EmployeeName = 'Scott';
+var EmployeeJob = 'Manager';
+var isPermanentEmployee = true;
+var DeptNo = 10;
+console.log("Employee Id :" + EmployeeId);
+console.log("Employee Name :" + EmployeeName);
+console.log("Employee Job :" + EmployeeJob);
+console.log("Employee Id :" + isPermanentEmployee);
+console.log("Employee Deptno :" + DeptNo);
+console.log("Employee Id :" + EmployeeId + " " + "Employee Name :" + EmployeeName + " " + "Employee Job :" + EmployeeJob + " " + "Employee Id :" + isPermanentEmployee + " " + "Employee Deptno :" + DeptNo);
