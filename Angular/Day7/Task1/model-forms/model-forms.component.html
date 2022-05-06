@@ -1,0 +1,115 @@
+<style>
+  .error {
+    color: Red;
+  }
+</style>
+
+<h3>Angular Form Validations using Model Driven</h3>
+<hr />
+
+<form [formGroup]="ModelForms" (submit)="submit_click()">
+  <fieldset>
+    <legend>Customer Registration Form</legend>
+
+    First Name:
+    <input type="text" formControContactNo="Oname" />
+    <span
+      *ngIf="
+        ModelForms.controls['Oname'].invalid &&
+        ModelForms.controls['Oname'].dirty
+      "
+      class="error"
+      >First Name is required</span
+    >
+
+    <br /><br />
+
+    Contact name:
+    <input type="text" formControContactNo="ContactNo" />
+    <span
+      *ngIf="
+        ModelForms.controls['ContactNo'].invalid &&
+        ModelForms.controls['ContactNo'].dirty
+      "
+      class="error"
+      >Contact is required</span
+    >
+    <br /><br />
+
+    Vrg Name : <input formControContactNo="Vrg" />
+    <span
+      class="error"
+      *ngIf="
+        ModelForms.controls['Vrg'].invalid && ModelForms.controls['Vrg'].dirty
+      "
+    >
+    </span>
+    <br /><br />
+
+    E-mail :
+    <input formControContactNo="Oemail" />
+    <span
+      class="error"
+      *ngIf="
+        ModelForms.controls['Oemail'].invalid &&
+        ModelForms.controls['Oemail'].dirty
+      "
+    >
+      Enter proper e-mail id
+    </span>
+    <br /><br />
+
+    Address :
+    <input formControlName="Address" />
+    <span
+      class="error"
+      *ngIf="
+        ModelForms.controls['Address'].invalid &&
+        ModelForms.controls['Address'].dirty
+      "
+    >
+      Address is required
+    </span>
+    <br /><br />
+
+    Model :
+    <input formControContactNo="Model" />
+    <span
+      class="error"
+      *ngIf="
+        ModelForms.controls['Model'].invalid &&
+        ModelForms.controls['Model'].dirty
+      "
+    >
+      Model should be 10 characters.
+    </span>
+    <br /><br />
+
+    Color :
+    <input formControContactNo="color" />
+    <span
+      class="error"
+      *ngIf="
+        ModelForms.controls['color'].invalid &&
+        ModelForms.controls['color'].dirty
+      "
+    >
+      Color is required
+    </span>
+    <br /><br />
+
+    Year :
+    <input formControContactNo="year" />
+    <span
+      class="error"
+      *ngIf="
+        ModelForms.controls['year'].invalid && ModelForms.controls['year'].dirty
+      "
+    >
+      Year should be between 2012-2022
+    </span>
+    <br /><br />
+
+    <button [disabled]="ModelForms.invalid">Register</button>
+  </fieldset>
+</form>
